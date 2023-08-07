@@ -1,0 +1,27 @@
+<app-headers></app-headers>
+
+<div class="container">
+
+    <h3>Listado de Guias</h3> 
+    <br>
+    <button type="button" class="btn btn-primary" (click)="newGuia()">Nueva Guia</button>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Guia</th>
+            <th scope="col">Destinatario</th>
+            <th scope="col">Direccion</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let guia of guias" (click)="editarGuia(guia.id)">
+            <th scope="row">{{guia.id}}</th>
+            <td>{{guia.id_guia}}</td>
+            <td>{{guia.destinatario}}</td>
+            <td>{{guia.direccion}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

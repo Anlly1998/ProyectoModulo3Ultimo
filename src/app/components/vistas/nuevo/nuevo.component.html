@@ -1,0 +1,31 @@
+<app-headers></app-headers>
+
+<div class="container">
+
+    <!--<form [formGroup]="newFormGuia"  (ngSubmit)="postForm(newFormGuia.value)">-->
+    <form [formGroup]="newFormGuia" (ngSubmit)="postForm(newFormGuia.value)" >
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Guia</label>
+            <input type="number" class="form-control" placeholder="Guia" formControlName="id_guia">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Destinatario</label>
+            <input type="text" class="form-control" placeholder="Destinatario" formControlName="destinatario">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Id Mensajero</label>
+            <input type="number" class="form-control" placeholder="Id Mensajero" formControlName="users_id">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Direccion</label>
+            <input type="text" class="form-control" placeholder="Direccion" formControlName="direccion">
+        </div>
+
+        <br>
+        <button type="submit" class="btn btn-primary" style="margin: 10px">Guardar</button>
+        <button type="button" class="btn btn-info" (click)="salir()">Volver</button>
+    </form>
+
+</div>
+
+
